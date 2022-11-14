@@ -1,19 +1,25 @@
-<div class="navbar">
+<nav class="navbar">
   <ul>
     <li>
       <a routerLink="/home" class="logo">H<b>SG</b></a>
     </li>
     <li class="burger">
-      <i class="material-icons"> {{ isMenuOpen ? "close" : "menu" }} </i>
+      <i class="material-icons" (click)="toggleMenu()">
+        {{ isMenuOpen ? "close" : "menu" }}
+      </i>
     </li>
 
-    <li class="menu">
-      <a routerLink="home">Home</a>
-      <a routerLink="classes">Classes</a>
-      <a routerLink="trainers">Trainers</a>
-      <a routerLink="blog">Blog</a>
-      <a routerLink="login">Login</a>
-      <a routerLink="signUp">Sign Up</a>
+    <li class="menu" [class.is-open]="isMenuOpen">
+      <a routerLink="home" class="menuItem">Home</a>
+      <a routerLink="classes" class="menuItem">Classes</a>
+      <a routerLink="trainers" class="menuItem">Trainers</a>
+      <a routerLink="blog" class="menuItem">Blog</a>
+      <a routerLink="login" class="menuItem"
+        ><button mat-raised-button>Login</button></a
+      >
+      <a routerLink="signUp" class="menuItem"
+        ><button mat-raised-button>Sign Up</button></a
+      >
     </li>
   </ul>
-</div>
+</nav>

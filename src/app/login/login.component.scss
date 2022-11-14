@@ -1,0 +1,21 @@
+.card {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  text-align: center;
+}
+
+h2 {
+  color: var(--prime);
+}
+
+.mat-raised-button {
+  background-color: var(--prime);
+  color: #fff;
+}

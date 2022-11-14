@@ -2,8 +2,8 @@
   width: 100%;
   position: fixed;
   background-color: #000;
-  padding: 30px 120px;
-  z-index: 1111;
+  padding: 20px 70px;
+  //z-index: 1111;
   transition: 0.5 ease;
   color: #fff;
 }
@@ -28,12 +28,57 @@ ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+    padding: 50px;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .logo {
+    padding: 50px;
+  }
 }
 
 .menu {
   font-size: 20px;
   font-weight: 500;
   margin: auto 0;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    display: none;
+
+    &.is-open {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 110px;
+      width: 100%;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .menuItem {
+      padding: 0 10px;
+      display: block;
+      height: 75px;
+      line-height: 75px;
+    }
+  }
 }
 
 .menu a {
@@ -42,4 +87,11 @@ ul {
 
 .menu a:hover {
   color: var(--prime);
+}
+
+.mat-raised-button {
+  background-color: var(--prime);
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
 }
